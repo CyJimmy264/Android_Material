@@ -82,6 +82,9 @@ class PictureOfTheDayFragment : Fragment() {
                         error(R.drawable.ic_load_error_vector)
                         placeholder(R.drawable.ic_no_photo_vector)
                     }
+
+                    title.text = serverResponseData.title
+                    explanation.text = serverResponseData.explanation
                 }
             }
             is PictureOfTheDayData.Loading -> {
